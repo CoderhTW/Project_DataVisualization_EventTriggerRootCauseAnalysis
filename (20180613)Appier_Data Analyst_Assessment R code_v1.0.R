@@ -108,4 +108,8 @@ ggplot(data=anomly_babf4[anomly_babf4$machine_id=="00d4ceae26b5905db33bca5a653c4
 lims <- as.POSIXct(strptime(c("2017-05-07 00:00:00","2017-05-07 23:59:59"), format = "%Y-%m-%d %H:%M")) 
 ggplot(data=anomly_babf4[anomly_babf4$machine_id=="9e9ee26d5678cc7dda90c480e727f0e1032dc9df",])+geom_histogram(aes(x=event_time))+scale_x_datetime(limits =lims)
 
+#anomly investigate (cluster:9a996346e2c398ca7c12a0dd06e32237de36c1f0)
+anomly_9a996<-logs_trig[logs_trig$cluster=="9a996346e2c398ca7c12a0dd06e32237de36c1f0",]
+head(summary(anomly_9a996$machine_id))
+ggplot(data=anomly_9a996[anomly_9a996$machine_id=="4559f6de0a7973aa141a02b53a251fed722a1473",])+geom_histogram(aes(x=event_time))
 
