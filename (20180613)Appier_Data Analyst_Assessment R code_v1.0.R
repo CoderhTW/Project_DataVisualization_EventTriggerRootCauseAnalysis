@@ -2,7 +2,7 @@
 event_A_logs <- read.csv("~/Desktop/Appier Data/event_A_logs.csv")
 event_B_logs <- read.csv("~/Desktop/Appier Data/event_B_logs.csv")
 
-#install/load sqldf and ggplot2 package
+#install/load sqldf, anytime, and ggplot2 package
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)) 
@@ -43,7 +43,7 @@ logs$triggered<-replace(logs$triggered,is.na(logs$triggered),"N")
 logs_norm<-logs[logs$triggered=="N",]
 logs_trig<-logs[logs$triggered=="Y",]
 
-#View data summary to find material cluster(s)
+#view data summary to find material cluster(s)
 des_stat<-cbind(summary(logs_trig$cluster),summary(logs$cluster),summary(logs_trig$cluster)/summary(logs$cluster))[1:14,]
 colnames(des_stat)<-c("event B count","event A count","event B trigger rate")
 View(des_stat) # 66 records of event B are not triggered by event A
