@@ -87,29 +87,29 @@ for (i in 1:length(unique(logs$cluster))){
 }
 
 #anomaly investigate (cluster:e581850f705724caebf21f35fdc1395da88a9388)
-anomly_e5818<-logs_trig[logs_trig$cluster=="e581850f705724caebf21f35fdc1395da88a9388",]
-head(summary(anomly_e5818$machine_id))
-ggplot(data=anomly_e5818[anomly_e5818$machine_id=="1645cbc3cfb3dc782fcd0816850c789196133fe1",])+geom_histogram(aes(x=event_time))
+anomaly_e5818<-logs_trig[logs_trig$cluster=="e581850f705724caebf21f35fdc1395da88a9388",]
+head(summary(anomaly_e5818$machine_id))
+ggplot(data=anomaly_e5818[anomaly_e5818$machine_id=="1645cbc3cfb3dc782fcd0816850c789196133fe1",])+geom_histogram(aes(x=event_time))
 
 #anomaly investigate (cluster:b3a012651bad958d7527618fc6a044654192b498)
-anomly_b3a01<-logs_trig[logs_trig$cluster=="b3a012651bad958d7527618fc6a044654192b498",]
-head(summary(anomly_b3a01$machine_id))
-ggplot(data=anomly_b3a01[anomly_b3a01$machine_id=="9a5d2ac40cfe19e56f625bb803fd7086882e660b",])+geom_histogram(aes(x=event_time))
+anomaly_b3a01<-logs_trig[logs_trig$cluster=="b3a012651bad958d7527618fc6a044654192b498",]
+head(summary(anomaly_b3a01$machine_id))
+ggplot(data=anomaly_b3a01[anomaly_b3a01$machine_id=="9a5d2ac40cfe19e56f625bb803fd7086882e660b",])+geom_histogram(aes(x=event_time))
 
 #anomaly investigate (cluster:6e65ccd2dcb418d0bdb844179b2418294e2292a0)
-anomly_6e65c<-logs_trig[logs_trig$cluster=="6e65ccd2dcb418d0bdb844179b2418294e2292a0",]
-head(summary(anomly_6e65c$machine_id))
-ggplot(data=anomly_6e65c[anomly_6e65c$machine_id=="cb1c56ec09f95d8df5496de8776dc26b07eb7ad9",])+geom_histogram(aes(x=event_time))
+anomaly_6e65c<-logs_trig[logs_trig$cluster=="6e65ccd2dcb418d0bdb844179b2418294e2292a0",]
+head(summary(anomaly_6e65c$machine_id))
+ggplot(data=anomaly_6e65c[anomaly_6e65c$machine_id=="cb1c56ec09f95d8df5496de8776dc26b07eb7ad9",])+geom_histogram(aes(x=event_time))
 
 #anomaly investigate (cluster:bafb42b2de21d125a905d935f9b6b77b7323df75)
-anomly_babf4<-logs_trig[logs_trig$cluster=="bafb42b2de21d125a905d935f9b6b77b7323df75",]
-head(summary(anomly_babf4$machine_id))
-ggplot(data=anomly_babf4[anomly_babf4$machine_id=="00d4ceae26b5905db33bca5a653c493b6df6ad01",])+geom_histogram(aes(x=event_time))
+anomaly_babf4<-logs_trig[logs_trig$cluster=="bafb42b2de21d125a905d935f9b6b77b7323df75",]
+head(summary(anomaly_babf4$machine_id))
+ggplot(data=anomaly_babf4[anomaly_babf4$machine_id=="00d4ceae26b5905db33bca5a653c493b6df6ad01",])+geom_histogram(aes(x=event_time))
 lims <- as.POSIXct(strptime(c("2017-05-07 00:00:00","2017-05-07 23:59:59"), format = "%Y-%m-%d %H:%M")) 
-ggplot(data=anomly_babf4[anomly_babf4$machine_id=="9e9ee26d5678cc7dda90c480e727f0e1032dc9df",])+geom_histogram(aes(x=event_time))+scale_x_datetime(limits =lims)
+ggplot(data=anomaly_babf4[anomaly_babf4$machine_id=="9e9ee26d5678cc7dda90c480e727f0e1032dc9df",])+geom_histogram(aes(x=event_time))+scale_x_datetime(limits =lims)
 
 #anomaly investigate (cluster:9a996346e2c398ca7c12a0dd06e32237de36c1f0)
-anomly_9a996<-logs_trig[logs_trig$cluster=="9a996346e2c398ca7c12a0dd06e32237de36c1f0",]
-head(summary(anomly_9a996$machine_id))
-ggplot(data=anomly_9a996[anomly_9a996$machine_id=="4559f6de0a7973aa141a02b53a251fed722a1473",])+geom_histogram(aes(x=event_time))
+anomaly_9a996<-logs_trig[logs_trig$cluster=="9a996346e2c398ca7c12a0dd06e32237de36c1f0",]
+head(summary(anomaly_9a996$machine_id))
+ggplot(data=anomaly_9a996[anomaly_9a996$machine_id=="4559f6de0a7973aa141a02b53a251fed722a1473",])+geom_histogram(aes(x=event_time))
 
