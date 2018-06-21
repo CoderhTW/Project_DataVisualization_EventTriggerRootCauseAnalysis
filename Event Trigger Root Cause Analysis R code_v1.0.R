@@ -1,6 +1,6 @@
 #import event logs data
-event_A_logs <- read.csv("~/Desktop/Appier Data/event_A_logs.csv")
-event_B_logs <- read.csv("~/Desktop/Appier Data/event_B_logs.csv")
+event_A_logs <- read.csv("~/Desktop/Data/event_A_logs.csv")
+event_B_logs <- read.csv("~/Desktop/Data/event_B_logs.csv")
 
 #install/load sqldf, anytime, and ggplot2 package
 ipak <- function(pkg){
