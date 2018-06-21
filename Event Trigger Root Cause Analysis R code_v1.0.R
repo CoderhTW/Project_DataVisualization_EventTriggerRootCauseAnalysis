@@ -1,4 +1,4 @@
-#import assessment data
+#import event logs data
 event_A_logs <- read.csv("~/Desktop/Appier Data/event_A_logs.csv")
 event_B_logs <- read.csv("~/Desktop/Appier Data/event_B_logs.csv")
 
